@@ -35,7 +35,7 @@
 								<Button id="copyTlbBtn" text="Copy" disable="true"/>
 								<Button id="pasteTlbBtn" text="Paste" disable="true"/>
 								<Separator />
-								<Button id="captureTlbBtn" text="Capture" />
+								<Button id="captureTlbBtn" text="Capture homok" />
 							</items>
 						</ToolBar>
 					</top>

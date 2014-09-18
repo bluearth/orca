@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+<MenuBar id="mainMnb" xmlns:fx="http://javafx.com/fxml" fx:controller="com.akiradata.orca.cap.Main">
+	<menus>
+		<!-- File  -->
+		<Menu id="fileMnu" text="_File">
+			<items>
+				<MenuItem fx:id="menuItem1" id="newProjMni" text="_New..." accelerator="ctrl+n" onAction="#onAction"/>
+				<MenuItem id="openProjMni" text="_Open..." accelerator="ctrl+o"/>
+				<Menu id="openRecentProjMnu" text="Open _recent" disable="true"/>
+				<MenuItem id="saveProjMni" text="_Save..." accelerator="ctrl+s" disable="true"/>
+				<Menu id="exportProjMnu" text="E_xport">
+					<items>
+						<MenuItem id="exportSelectionMni" text="Selection..." disable="true"/>
+						<MenuItem id="exportProjectMni" text="Project..." disable="true"/>
+					</items>
+				</Menu>
+				<MenuItem id="projPropMni" text="_Properties..." disable="true"/>
+				<MenuItem id="closeProjMni" text="_Close" disable="true"/>
+				<SeparatorMenuItem />
+				<MenuItem id="connectToWorkspaceMni" text="_Connect to workspace..."/>
+				<SeparatorMenuItem />
+				<MenuItem id="exitAppMni" text="_Quit" accelerator="ctrl+q"/>				
+			</items>
+		</Menu>
+		<!-- Edit  -->
+		<Menu id="editMnu" text="_Edit">
+			<items>
+				<MenuItem id="cutMni" text="Cu_t" accelerator="ctrl+x" disable="true"/>
+				<MenuItem id="copyMni" text="_Copy" accelerator="ctrl+c" disable="true"/>
+				<MenuItem id="pasteMni" text="_Paste" accelerator="ctrl+v" disable="true"/>
+				<SeparatorMenuItem />
+				<MenuItem id="findMni" text="_Find..." accelerator="ctrl+f"/>
+			</items>
+		</Menu>
+		<!-- View  -->
+		<Menu id="viewMnu" text="_View">
+			<items>
+				<MenuItem id="zoomInMni" text="Zoom in" accelerator="ctrl+=" disable="true"/>
+				<MenuItem id="zoomOutMni" text="Zoom out" accelerator="ctrl+-" disable="true"/>
+				<MenuItem id="setZoomMni" text="Set zoom level..." disable="true"/>
+				<MenuItem id="zoomResetMni" text="Reset zoom level" accelerator="ctrl+0" disable="true"/>
+				<MenuItem id="zoomSelectMni" text="Show selection only" accelerator="ctrl+space" disable="true"/>
+			</items>
+		</Menu>
+		<!-- Help  -->
+		<Menu id="helpMnu" text="_Help">
+			<items>
+				<MenuItem id="openHelpMni" text="Online help..." accelerator="F1"/>
+				<SeparatorMenuItem />
+				<MenuItem id="aboutHelpMni" text="About ORCA Capture..."/>
+			</items>
+		</Menu>
+	</menus>
+</MenuBar>
+
