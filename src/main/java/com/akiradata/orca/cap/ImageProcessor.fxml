@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ScrollPane fx:id="fxScrollPane" fitToHeight="true" fitToWidth="true" prefViewportHeight="3565.0" prefViewportWidth="2385.0" style="-fx-background-color: #555555;">
+         <content>
+            <AnchorPane fx:id="fxAnchorPane">
+               <children>
+                  <ImageView fx:id="fxImageView" onMouseDragged="#mosDragged" onMouseMoved="#mosMoved" onMousePressed="#mosPressed" onMouseReleased="#mosReleased" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <ToolBar fx:id="fxToolBar" prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Button fx:id="fxButtonCapture" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#capture">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@capture.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Play / Capture" />
+               </tooltip></Button>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@reset.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Reset" />
+               </tooltip></Button>
+            <Separator orientation="VERTICAL" />
+            <Button mnemonicParsing="false" onAction="#onActionButtonZoomIn">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@zoomin.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Zoom In" />
+               </tooltip></Button>
+            <Button layoutX="25.0" layoutY="25.0" mnemonicParsing="false" onAction="#onActionButtonZoomOut">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@zoomout.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="10.0" radius="4.5" width="10.0" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Zoom Out" />
+               </tooltip></Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="7.0" />
+            <Label prefHeight="17.0" prefWidth="38.0" text="Rotate" />
+            <TextField fx:id="fxTextFieldRotate" onKeyReleased="#rotate" prefHeight="25.0" prefWidth="58.0" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="7.0" />
+            <Label fx:id="fxLabelRotateQuestion" text="Do you have to let it linger?" visible="false" />
+            <Button fx:id="fxButtonCancel" cancelButton="true" mnemonicParsing="false" onAction="#onActionButtonCancel" text="Cancel" visible="false" />
+            <Button fx:id="fxButtonOk" mnemonicParsing="false" onAction="#onActionButtonOk" text="OK" visible="false" />
+        </items>
+      </ToolBar>
+   </top>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <bottom>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="fxLabelStatus" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Ready" HBox.hgrow="ALWAYS" />
+                  <FlowPane fx:id="fxFlowPane" columnHalignment="CENTER" prefHeight="21.0" prefWidth="636.0" BorderPane.alignment="CENTER" />
+                  <ProgressBar fx:id="fxProgressBar" prefHeight="15.0" visible="false">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <TitledPane fx:id="fxTitledPane" expanded="false" text="kira kira disini ditulis apa ya??" textFill="RED" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.7448453608247423" prefHeight="160.0" prefWidth="200.0">
+                          <items>
+                              <VBox>
+                                 <children>
+                                    <CheckBox fx:id="fxCheckBoxIsConcat" mnemonicParsing="false" text="isConcat String?">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <TextArea fx:id="fxTextAreaOcr" prefHeight="200.0" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </VBox.margin>
+                                    </TextArea>
+                                 </children>
+                              </VBox>
+                              <TabPane>
+                                 <tabs>
+                                    <Tab closable="false" text="Tags">
+                                       <content>
+                                          <VBox>
+                                             <children>
+                                                <Label text="Use semicolon ( ; ) as separator" />
+                                                <TextArea fx:id="fxTextAreaTags">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab closable="false" text="Comments">
+                                      <content>
+                                          <VBox>
+                                             <children>
+                                                <TextArea fx:id="fxTextAreaComments">
+                                                   <VBox.margin>
+                                                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                   </VBox.margin>
+                                                </TextArea>
+                                             </children>
+                                          </VBox>
+                                      </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                          </items>
+                        </SplitPane>
+                        <HBox alignment="TOP_RIGHT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#clear" text="Clear">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#save" text="Save">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+         </center>
+      </BorderPane>
+   </bottom>
+</BorderPane>
