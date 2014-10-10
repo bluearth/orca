@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.akiradata.co.id/orca-project"
+	xmlns="http://www.akiradata.co.id/orca-project" 
+	elementFormDefault="qualified">
+
+    <xs:complexType name="projectType"></xs:complexType>
+
+    <xs:element name="project" type="projectType"/>
+</xs:schema>

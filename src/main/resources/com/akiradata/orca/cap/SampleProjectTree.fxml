@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.MenuBar?>
+
+<TreeView prefHeight="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+	<TreeItem expanded="true">
+		<value>UMS PMB 2014</value>
+		<children>
+			<TreeItem expanded="true">
+				<value>Strata-1</value>
+				<children>
+					<TreeItem expanded="true">
+						<value>Teknik Informatika</value>
+						<children>
+							<TreeItem>
+								<value>TI1400000001</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000002</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000003</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000004</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000005</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000006</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000007</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000008</value>
+							</TreeItem>
+							<TreeItem>
+								<value>TI1400000009</value>
+							</TreeItem>
+						</children>
+					</TreeItem>
+
+					<TreeItem>
+						<value>Akuntannsi</value>
+						<children>
+							<TreeItem>
+								<value>AK1400000001</value>
+							</TreeItem>
+							<TreeItem>
+								<value>AK1400000002</value>
+							</TreeItem>
+							<TreeItem>
+								<value>AK1400000003</value>
+							</TreeItem>
+							<TreeItem>
+								<value>AK1400000004</value>
+							</TreeItem>
+							<TreeItem>
+								<value>AK1400000005</value>
+							</TreeItem>
+						</children>
+					</TreeItem>
+
+					<TreeItem>
+						<value>Perhotelan</value>
+						<children>
+							<TreeItem>
+								<value>HT1400000001</value>
+							</TreeItem>
+							<TreeItem>
+								<value>HT1400000002</value>
+							</TreeItem>
+						</children>
+					</TreeItem>
+				</children>
+			</TreeItem>
+
+			<TreeItem>
+				<value>Strata-2</value>
+				<children>
+					<TreeItem>
+						<value>Manajemen Pemasaran</value>
+					</TreeItem>
+				</children>
+			</TreeItem>
+			<TreeItem>
+				<value>Strata-3</value>
+				<children>
+					<TreeItem>
+						<value>Apalah</value>
+					</TreeItem>
+				</children>
+			</TreeItem>
+		</children>
+	</TreeItem>
+</TreeView>
